@@ -8,7 +8,7 @@ class Car {
     // и выводит в консоль значения свойств maxSpeed, speed, isOn, distance и price.
 
     static getSpecs(car) {
-        console.log(car.maxSpeed, car.speed, car.isOn, car.distance, car.price);
+        console.log(`maxSpeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`);
     }
     // Конструктор получает объект настроек.
     //          Добавь свойства будущеего экземпляра класса:
