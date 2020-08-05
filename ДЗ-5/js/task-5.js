@@ -26,29 +26,23 @@ class Car {
     }
 
     turnOn() {
-        if (' ') {
-            this.isOn = true;
-            console.log(this.isOn);
-        }
+        this.isOn = true;
     }
 
     turnOff() {
-        if (' ') {
-            this.isOn = false;
-            console.log(this.isOn);
-            this.speed = 0;
-        }
+        this.isOn = false;
+        this.speed = 0;
     }
 
     accelerate(value) {
-        if (this.speed < this.maxSpeed) {
+        if (this.speed + value <= this.maxSpeed) {
             this.speed += value;
             console.log('speed: ', this.speed);
         };
     }
 
     decelerate(value) {
-        if (this.speed > 0) {
+        if (this.speed - value >= 0) {
             this.speed -= value;
             console.log('speed: ', this.speed);
         };
@@ -56,8 +50,8 @@ class Car {
 
     drive(hours) {
         if (this.isOn === true) {
-            this.distance = this.distance + (hours * this.speed)
-            console.log(this.distance);
+            this.distance = hours * this.speed;
+            console.log(`distance:  ${this.distance}`);
         }
     }
 };

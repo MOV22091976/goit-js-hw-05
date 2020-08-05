@@ -9,7 +9,7 @@ class Storage {
 
     }
     addItem(item) {
-        return this.items.push(item)
+        this.items.push(item)
 
     }
     removeItem(item) {
@@ -18,7 +18,7 @@ class Storage {
                 this.items.splice(i, 1);
             }
         }
-        return this.items
+        this.items
     }
 };
 
